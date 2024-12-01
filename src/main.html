@@ -71,55 +71,56 @@
         >
           <div class="flex-1 overflow-y-auto pr-4 h-full">
             <div class="flex flex-col flex-nowrap items-center h-full">
-              <div id="input-panel-section-1" class="w-full">
-                <div class="">
-                  <label
-                    for="input-panel-section-1"
-                    class="block text-base font-bold text-gray-900"
-                    >Nationality</label
+              <div
+                id="input-panel-section-1"
+                class="w-full pl-1 overflow-visible"
+              >
+                <label
+                  for="input-panel-section-1"
+                  class="block text-base font-bold text-gray-900"
+                  >Nationality</label
+                >
+                <div id="selection-input-nationality" class="relative mt-2">
+                  <input
+                    id="combobox"
+                    type="text"
+                    class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-4 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
+                    role="combobox"
+                    aria-controls="options"
+                    aria-expanded="false"
+                  />
+                  <button
+                    type="button"
+                    class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
                   >
-                  <div id="selection-input-nationality" class="relative mt-2">
-                    <input
-                      id="combobox"
-                      type="text"
-                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
-                      role="combobox"
-                      aria-controls="options"
-                      aria-expanded="false"
-                    />
-                    <button
-                      type="button"
-                      class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
+                    <svg
+                      class="size-5 text-white"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                      data-slot="icon"
                     >
-                      <svg
-                        class="size-5 text-white"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        data-slot="icon"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </button>
 
-                    <ul
-                      class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm hidden"
-                      id="options"
-                      role="listbox"
-                    ></ul>
-                  </div>
+                  <ul
+                    class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm hidden"
+                    id="options"
+                    role="listbox"
+                  ></ul>
                 </div>
               </div>
-              <div class="border w-full my-4"></div>
+              <div class="border w-full my-4 ml-1"></div>
               <div id="input-panel-section-2" class="flex-shrink-0 w-full">
                 <div>
                   <label
                     for="input-panel-section-2"
-                    class="block text-base font-bold text-gray-900"
+                    class="block pl-1 overflow-visible text-base font-bold text-gray-900"
                     >Inbound Travel Plan<span
                       class="text-s font-medium text-gray-300 ml-4"
                       >Optional</span
@@ -130,7 +131,7 @@
                   id="selection-input-inbound-travel-origin"
                   class="relative mt-2"
                 >
-                  <div class="mt-4">
+                  <div class="mt-4 pl-1 overflow-visible">
                     <label
                       for="origin-combobox"
                       class="block text-sm font-semibold text-gray-400"
@@ -140,7 +141,7 @@
                       <input
                         id="origin-combobox"
                         type="text"
-                        class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
+                        class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-4 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
                         role="combobox"
                         aria-controls="origin-options"
                         aria-expanded="false"
@@ -225,7 +226,7 @@
                   id="selection-input-inbound-travel-destination"
                   class="relative mt-2"
                 >
-                  <div class="mt-4">
+                  <div class="mt-4 pl-1 overflow-visible">
                     <label
                       for="destination-combobox"
                       class="block text-sm font-semibold text-gray-400"
@@ -235,7 +236,7 @@
                       <input
                         id="destination-combobox"
                         type="text"
-                        class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
+                        class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-4 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
                         role="combobox"
                         aria-controls="destination-options"
                         aria-expanded="false"
@@ -266,7 +267,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="relative mt-4">
+                <div class="relative mt-4 pl-1 overflow-visible">
                   <label
                     for="datepicker-autohide"
                     class="block text-sm font-semibold text-gray-400"
@@ -293,13 +294,13 @@
                       datepicker
                       datepicker-autohide
                       type="text"
-                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 ps-10 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6 placeholder:text-sm placeholder:text-gray-300 placeholder:font-normal"
+                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 ps-10 text-base text-gray-400 font-medium border-0 outline-none focus:outline-4 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6 placeholder:text-sm placeholder:text-gray-300 placeholder:font-normal"
                       placeholder="DD/MM/YYYY"
                     />
                   </div>
                 </div>
               </div>
-              <div class="border border-gray-200 w-full my-4"></div>
+              <div class="border border-gray-200 w-full my-4 ml-1"></div>
               <div
                 id="input-panel-section-3"
                 class="flex-shrink-0 flex-grow w-full"
@@ -307,7 +308,7 @@
                 <div>
                   <label
                     for="input-panel-section-3"
-                    class="block text-base font-bold text-gray-900"
+                    class="block pl-1 overflow-visible text-base font-bold text-gray-900"
                     >Outbound Travel Plan<span
                       class="text-s font-medium text-gray-300 ml-4"
                       >Optional</span
@@ -318,7 +319,7 @@
                   id="selection-input-outbound-travel-origin"
                   class="relative mt-2"
                 >
-                  <div class="mt-4">
+                  <div class="mt-4 pl-1 overflow-visible">
                     <label
                       for="outbound-destination-combobox"
                       class="block text-sm font-semibold text-gray-400"
@@ -328,7 +329,7 @@
                       <input
                         id="outbound-destination-combobox"
                         type="text"
-                        class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
+                        class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-4 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
                         role="combobox"
                         aria-controls="outbound-destination-options"
                         aria-expanded="false"
@@ -410,7 +411,7 @@
                   </div>
                 </div>
 
-                <div class="relative mt-4">
+                <div class="relative mt-4 pl-1 overflow-visible">
                   <label
                     for="outbound-datepicker-autohide"
                     class="block text-sm font-semibold text-gray-400"
@@ -437,7 +438,7 @@
                       datepicker
                       datepicker-autohide
                       type="text"
-                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 ps-10 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6 placeholder:text-sm placeholder:text-gray-300 placeholder:font-normal"
+                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 ps-10 text-base text-gray-400 font-medium border-0 outline-none focus:outline-4 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6 placeholder:text-sm placeholder:text-gray-300 placeholder:font-normal"
                       placeholder="DD/MM/YYYY"
                     />
                   </div>
@@ -445,7 +446,7 @@
                 <div class="h-96 w-full"></div>
               </div>
               <div class="sticky bottom-0 w-full bg-white">
-                <div class="border border-gray-200 w-full"></div>
+                <div class="border border-gray-200 w-full ml-1"></div>
                 <div
                   id="input-panel-section-4"
                   class="w-full flex justify-between py-4"

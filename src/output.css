@@ -1187,6 +1187,16 @@ input:checked + .toggle-bg {
   margin-right: 0.5rem;
 }
 
+.mx-9 {
+  margin-left: 2.25rem;
+  margin-right: 2.25rem;
+}
+
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1221,6 +1231,10 @@ input:checked + .toggle-bg {
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .block {
@@ -1554,6 +1568,10 @@ input:checked + .toggle-bg {
   overflow: hidden;
 }
 
+.overflow-visible {
+  overflow: visible;
+}
+
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -1853,6 +1871,10 @@ input:checked + .toggle-bg {
 
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
 }
 
 .text-center {
@@ -2240,8 +2262,16 @@ input:checked + .toggle-bg {
   outline-width: 2px;
 }
 
+.focus\:outline-4:focus {
+  outline-width: 4px;
+}
+
 .focus\:-outline-offset-2:focus {
   outline-offset: -2px;
+}
+
+.focus\:-outline-offset-4:focus {
+  outline-offset: -4px;
 }
 
 .focus\:outline-\[\#C18C5D\]:focus {
