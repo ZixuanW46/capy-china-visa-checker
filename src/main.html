@@ -61,393 +61,407 @@
           </svg>
         </div>
       </nav>
-      <div id="main-section" class="flex flex-1 overflow-hidden mx-8 mb-8">
-        <div id="input-panel" class="w-3/12 min-w-56 max-w-96 overflow-y-auto">
-          <div class="flex flex-col flex-nowrap items-center min-h-full pr-4">
-            <div id="input-panel-section-1" class="flex-shrink-0 w-full">
-              <div class="">
-                <label
-                  for="input-panel-section-1"
-                  class="block text-base font-bold text-gray-900"
-                  >Nationality</label
+      <div
+        id="main-section"
+        class="flex flex-1 overflow-hidden mx-8 mb-8 h-full"
+      >
+        <div
+          id="input-panel"
+          class="w-3/12 min-w-56 max-w-96 flex flex-col h-full"
+        >
+          <div class="flex-1 overflow-y-auto pr-4 h-full">
+            <div class="flex flex-col flex-nowrap items-center h-full">
+              <div id="input-panel-section-1" class="w-full">
+                <div class="">
+                  <label
+                    for="input-panel-section-1"
+                    class="block text-base font-bold text-gray-900"
+                    >Nationality</label
+                  >
+                  <div id="selection-input-nationality" class="relative mt-2">
+                    <input
+                      id="combobox"
+                      type="text"
+                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
+                      role="combobox"
+                      aria-controls="options"
+                      aria-expanded="false"
+                    />
+                    <button
+                      type="button"
+                      class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
+                    >
+                      <svg
+                        class="size-5 text-white"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
+                        data-slot="icon"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+
+                    <ul
+                      class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm hidden"
+                      id="options"
+                      role="listbox"
+                    ></ul>
+                  </div>
+                </div>
+              </div>
+              <div class="border w-full my-4"></div>
+              <div id="input-panel-section-2" class="flex-shrink-0 w-full">
+                <div>
+                  <label
+                    for="input-panel-section-2"
+                    class="block text-base font-bold text-gray-900"
+                    >Inbound Travel Plan<span
+                      class="text-s font-medium text-gray-300 ml-4"
+                      >Optional</span
+                    ></label
+                  >
+                </div>
+                <div
+                  id="selection-input-inbound-travel-origin"
+                  class="relative mt-2"
                 >
-                <div id="selection-input-nationality" class="relative mt-2">
-                  <input
-                    id="combobox"
-                    type="text"
-                    class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
-                    role="combobox"
-                    aria-controls="options"
-                    aria-expanded="false"
-                  />
+                  <div class="mt-4">
+                    <label
+                      for="origin-combobox"
+                      class="block text-sm font-semibold text-gray-400"
+                      >Flight Origin</label
+                    >
+                    <div class="relative mt-2 bg-[#E6E6E6] rounded-md">
+                      <input
+                        id="origin-combobox"
+                        type="text"
+                        class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
+                        role="combobox"
+                        aria-controls="origin-options"
+                        aria-expanded="false"
+                      />
+                      <button
+                        type="button"
+                        class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
+                      >
+                        <svg
+                          class="size-5 text-white"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <ul
+                        class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm hidden"
+                        id="origin-options"
+                        role="listbox"
+                      ></ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-2 pt-3 w-full">
+                  <div class="w-full flex flex-col items-center justify-start">
+                    <div class="w-full">
+                      <div
+                        class="flex flex-wrap items-center justify-start gap-3"
+                      >
+                        <div class="text-xs font-semibold text-[#C18C5D]">
+                          Are you taking a transit?
+                        </div>
+                        <div class="group grid size-4 grid-cols-1">
+                          <input
+                            id="transit-checkbox"
+                            aria-describedby="transit-checkbox-description"
+                            name="transit-checkbox"
+                            type="checkbox"
+                            class="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-[#C18C5D] checked:bg-[#C18C5D] indeterminate:border-[#C18C5D] indeterminate:bg-[#C18C5D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C18C5D] disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                          />
+                          <svg
+                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-[:disabled]:stroke-gray-950/25"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                          >
+                            <path
+                              class="opacity-0 group-has-[:checked]:opacity-100"
+                              d="M3 8L6 11L11 3.5"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              class="opacity-0 group-has-[:indeterminate]:opacity-100"
+                              d="M3 7H11"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        id="transit-info"
+                        class="font-extralight text-gray-400 text-xs mt-1 hidden"
+                      >
+                        The "flight origin" is the departure point of your last
+                        flight before entering China. e.g. if traveling UK →
+                        Japan → China, the "flight origin" is Japan.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="selection-input-inbound-travel-destination"
+                  class="relative mt-2"
+                >
+                  <div class="mt-4">
+                    <label
+                      for="destination-combobox"
+                      class="block text-sm font-semibold text-gray-400"
+                      >Arrival Airport</label
+                    >
+                    <div class="relative mt-2 bg-[#E6E6E6] rounded-md">
+                      <input
+                        id="destination-combobox"
+                        type="text"
+                        class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
+                        role="combobox"
+                        aria-controls="destination-options"
+                        aria-expanded="false"
+                      />
+                      <button
+                        type="button"
+                        class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
+                      >
+                        <svg
+                          class="size-5 text-white"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <ul
+                        class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm hidden"
+                        id="destination-options"
+                        role="listbox"
+                      ></ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative mt-4">
+                  <label
+                    for="datepicker-autohide"
+                    class="block text-sm font-semibold text-gray-400"
+                    >Arrival Date</label
+                  >
+                  <div class="relative mt-2">
+                    <div
+                      class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                    >
+                      <svg
+                        class="w-4 h-4 text-[#C18C5D]"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                        />
+                      </svg>
+                    </div>
+                    <input
+                      id="datepicker-autohide"
+                      datepicker
+                      datepicker-autohide
+                      type="text"
+                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 ps-10 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6 placeholder:text-sm placeholder:text-gray-300 placeholder:font-normal"
+                      placeholder="DD/MM/YYYY"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="border border-gray-200 w-full my-4"></div>
+              <div
+                id="input-panel-section-3"
+                class="flex-shrink-0 flex-grow w-full"
+              >
+                <div>
+                  <label
+                    for="input-panel-section-3"
+                    class="block text-base font-bold text-gray-900"
+                    >Outbound Travel Plan<span
+                      class="text-s font-medium text-gray-300 ml-4"
+                      >Optional</span
+                    ></label
+                  >
+                </div>
+                <div
+                  id="selection-input-outbound-travel-origin"
+                  class="relative mt-2"
+                >
+                  <div class="mt-4">
+                    <label
+                      for="outbound-destination-combobox"
+                      class="block text-sm font-semibold text-gray-400"
+                      >Flight Destination</label
+                    >
+                    <div class="relative mt-2 bg-[#E6E6E6] rounded-md">
+                      <input
+                        id="outbound-destination-combobox"
+                        type="text"
+                        class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
+                        role="combobox"
+                        aria-controls="outbound-destination-options"
+                        aria-expanded="false"
+                      />
+                      <button
+                        type="button"
+                        class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
+                      >
+                        <svg
+                          class="size-5 text-white"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </button>
+                      <ul
+                        class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm hidden"
+                        id="outbound-destination-options"
+                        role="listbox"
+                      ></ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-2 pt-3 w-full">
+                  <div class="w-full flex flex-col items-center justify-start">
+                    <div class="w-full">
+                      <div
+                        class="flex flex-wrap items-center justify-start gap-3"
+                      >
+                        <div class="text-xs font-semibold text-[#C18C5D]">
+                          Are you taking a transit?
+                        </div>
+                        <div class="group grid size-4 grid-cols-1">
+                          <input
+                            id="outbound-transit-checkbox"
+                            aria-describedby="outbound-transit-checkbox-description"
+                            name="outbound-transit-checkbox"
+                            type="checkbox"
+                            class="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-[#C18C5D] checked:bg-[#C18C5D] indeterminate:border-[#C18C5D] indeterminate:bg-[#C18C5D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C18C5D] disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
+                          />
+                          <svg
+                            class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-[:disabled]:stroke-gray-950/25"
+                            viewBox="0 0 14 14"
+                            fill="none"
+                          >
+                            <path
+                              class="opacity-0 group-has-[:checked]:opacity-100"
+                              d="M3 8L6 11L11 3.5"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              class="opacity-0 group-has-[:indeterminate]:opacity-100"
+                              d="M3 7H11"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        id="outbound-transit-info"
+                        class="font-extralight text-gray-400 text-xs mt-1 hidden"
+                      >
+                        The "Flight Destination" is the first landing country of
+                        your flight leaving China. e.g. if traveling China →
+                        Japan → UK, the "Flight Destination" is Japan.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative mt-4">
+                  <label
+                    for="outbound-datepicker-autohide"
+                    class="block text-sm font-semibold text-gray-400"
+                    >Departure Date</label
+                  >
+                  <div class="relative mt-2">
+                    <div
+                      class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                    >
+                      <svg
+                        class="w-4 h-4 text-[#C18C5D]"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                        />
+                      </svg>
+                    </div>
+                    <input
+                      id="outbound-datepicker-autohide"
+                      datepicker
+                      datepicker-autohide
+                      type="text"
+                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 ps-10 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6 placeholder:text-sm placeholder:text-gray-300 placeholder:font-normal"
+                      placeholder="DD/MM/YYYY"
+                    />
+                  </div>
+                </div>
+                <div class="h-96 w-full"></div>
+              </div>
+              <div class="sticky bottom-0 w-full bg-white">
+                <div class="border border-gray-200 w-full"></div>
+                <div
+                  id="input-panel-section-4"
+                  class="w-full flex justify-between py-4"
+                >
                   <button
-                    type="button"
-                    class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
+                    class="w-20 h-10 text-zinc-400 underline font-medium text-sm rounded-md active:text-zinc-600 hover:text-[#C18C5D]"
                   >
-                    <svg
-                      class="size-5 text-white"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
-                      data-slot="icon"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
+                    Clear All
                   </button>
-
-                  <ul
-                    class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm hidden"
-                    id="options"
-                    role="listbox"
-                  ></ul>
-                </div>
-              </div>
-            </div>
-            <div class="border w-full my-4"></div>
-            <div id="input-panel-section-2" class="flex-shrink-0 w-full">
-              <div>
-                <label
-                  for="input-panel-section-2"
-                  class="block text-base font-bold text-gray-900"
-                  >Inbound Travel Plan<span
-                    class="text-s font-medium text-gray-300 ml-4"
-                    >Optional</span
-                  ></label
-                >
-              </div>
-              <div
-                id="selection-input-inbound-travel-origin"
-                class="relative mt-2"
-              >
-                <div class="mt-4">
-                  <label
-                    for="origin-combobox"
-                    class="block text-sm font-semibold text-gray-400"
-                    >Flight Origin</label
+                  <button
+                    class="w-20 h-10 bg-[#C18C5D] text-white font-medium text-sm rounded-md hover:bg-[#A3744B] active:outline-none active:ring-2 active:ring-offset-2 active:ring-[#A3744B]"
                   >
-                  <div class="relative mt-2 bg-[#E6E6E6] rounded-md">
-                    <input
-                      id="origin-combobox"
-                      type="text"
-                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
-                      role="combobox"
-                      aria-controls="origin-options"
-                      aria-expanded="false"
-                    />
-                    <button
-                      type="button"
-                      class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
-                    >
-                      <svg
-                        class="size-5 text-white"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        data-slot="icon"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                    <ul
-                      class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm hidden"
-                      id="origin-options"
-                      role="listbox"
-                    ></ul>
-                  </div>
+                    Check
+                  </button>
                 </div>
               </div>
-              <div class="px-2 pt-3 w-full">
-                <div class="w-full flex flex-col items-center justify-start">
-                  <div class="w-full">
-                    <div
-                      class="flex flex-wrap items-center justify-start gap-3"
-                    >
-                      <div class="text-xs font-semibold text-[#C18C5D]">
-                        Are you taking a transit?
-                      </div>
-                      <div class="group grid size-4 grid-cols-1">
-                        <input
-                          id="transit-checkbox"
-                          aria-describedby="transit-checkbox-description"
-                          name="transit-checkbox"
-                          type="checkbox"
-                          class="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-[#C18C5D] checked:bg-[#C18C5D] indeterminate:border-[#C18C5D] indeterminate:bg-[#C18C5D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C18C5D] disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
-                        />
-                        <svg
-                          class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-[:disabled]:stroke-gray-950/25"
-                          viewBox="0 0 14 14"
-                          fill="none"
-                        >
-                          <path
-                            class="opacity-0 group-has-[:checked]:opacity-100"
-                            d="M3 8L6 11L11 3.5"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            class="opacity-0 group-has-[:indeterminate]:opacity-100"
-                            d="M3 7H11"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      id="transit-info"
-                      class="font-extralight text-gray-400 text-xs mt-1 hidden"
-                    >
-                      The "flight origin" is the departure point of your last
-                      flight before entering China. e.g. if traveling UK → Japan
-                      → China, the "flight origin" is Japan.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="selection-input-inbound-travel-destination"
-                class="relative mt-2"
-              >
-                <div class="mt-4">
-                  <label
-                    for="destination-combobox"
-                    class="block text-sm font-semibold text-gray-400"
-                    >Arrival Airport</label
-                  >
-                  <div class="relative mt-2 bg-[#E6E6E6] rounded-md">
-                    <input
-                      id="destination-combobox"
-                      type="text"
-                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
-                      role="combobox"
-                      aria-controls="destination-options"
-                      aria-expanded="false"
-                    />
-                    <button
-                      type="button"
-                      class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
-                    >
-                      <svg
-                        class="size-5 text-white"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        data-slot="icon"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                    <ul
-                      class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm hidden"
-                      id="destination-options"
-                      role="listbox"
-                    ></ul>
-                  </div>
-                </div>
-              </div>
-              <div class="relative mt-4">
-                <label
-                  for="datepicker-autohide"
-                  class="block text-sm font-semibold text-gray-400"
-                  >Arrival Date</label
-                >
-                <div class="relative mt-2">
-                  <div
-                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-                  >
-                    <svg
-                      class="w-4 h-4 text-[#C18C5D]"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
-                      />
-                    </svg>
-                  </div>
-                  <input
-                    id="datepicker-autohide"
-                    datepicker
-                    datepicker-autohide
-                    type="text"
-                    class="block w-full rounded-md bg-[#F2F2F2] py-1.5 ps-10 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6 placeholder:text-sm placeholder:text-gray-300 placeholder:font-normal"
-                    placeholder="DD/MM/YYYY"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="border border-gray-200 w-full my-4"></div>
-            <div
-              id="input-panel-section-3"
-              class="flex-shrink-0 flex-grow w-full"
-            >
-              <div>
-                <label
-                  for="input-panel-section-3"
-                  class="block text-base font-bold text-gray-900"
-                  >Outbound Travel Plan<span
-                    class="text-s font-medium text-gray-300 ml-4"
-                    >Optional</span
-                  ></label
-                >
-              </div>
-              <div
-                id="selection-input-outbound-travel-origin"
-                class="relative mt-2"
-              >
-                <div class="mt-4">
-                  <label
-                    for="outbound-destination-combobox"
-                    class="block text-sm font-semibold text-gray-400"
-                    >Flight Destination</label
-                  >
-                  <div class="relative mt-2 bg-[#E6E6E6] rounded-md">
-                    <input
-                      id="outbound-destination-combobox"
-                      type="text"
-                      class="block w-full rounded-md bg-[#F2F2F2] py-1.5 pl-3 pr-12 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6"
-                      role="combobox"
-                      aria-controls="outbound-destination-options"
-                      aria-expanded="false"
-                    />
-                    <button
-                      type="button"
-                      class="absolute inset-y-0 right-0 flex items-center rounded-r-md px-2 focus:outline-none"
-                    >
-                      <svg
-                        class="size-5 text-white"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                        data-slot="icon"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                    <ul
-                      class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm hidden"
-                      id="outbound-destination-options"
-                      role="listbox"
-                    ></ul>
-                  </div>
-                </div>
-              </div>
-              <div class="px-2 pt-3 w-full">
-                <div class="w-full flex flex-col items-center justify-start">
-                  <div class="w-full">
-                    <div
-                      class="flex flex-wrap items-center justify-start gap-3"
-                    >
-                      <div class="text-xs font-semibold text-[#C18C5D]">
-                        Are you taking a transit?
-                      </div>
-                      <div class="group grid size-4 grid-cols-1">
-                        <input
-                          id="outbound-transit-checkbox"
-                          aria-describedby="outbound-transit-checkbox-description"
-                          name="outbound-transit-checkbox"
-                          type="checkbox"
-                          class="col-start-1 row-start-1 appearance-none rounded border border-gray-300 bg-white checked:border-[#C18C5D] checked:bg-[#C18C5D] indeterminate:border-[#C18C5D] indeterminate:bg-[#C18C5D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C18C5D] disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
-                        />
-                        <svg
-                          class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-[:disabled]:stroke-gray-950/25"
-                          viewBox="0 0 14 14"
-                          fill="none"
-                        >
-                          <path
-                            class="opacity-0 group-has-[:checked]:opacity-100"
-                            d="M3 8L6 11L11 3.5"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            class="opacity-0 group-has-[:indeterminate]:opacity-100"
-                            d="M3 7H11"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      id="outbound-transit-info"
-                      class="font-extralight text-gray-400 text-xs mt-1 hidden"
-                    >
-                      The "Flight Destination" is the first landing country of
-                      your flight leaving China. e.g. if traveling China → Japan
-                      → UK, the "Flight Destination" is Japan.
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="relative mt-4">
-                <label
-                  for="outbound-datepicker-autohide"
-                  class="block text-sm font-semibold text-gray-400"
-                  >Departure Date</label
-                >
-                <div class="relative mt-2">
-                  <div
-                    class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-                  >
-                    <svg
-                      class="w-4 h-4 text-[#C18C5D]"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
-                      />
-                    </svg>
-                  </div>
-                  <input
-                    id="outbound-datepicker-autohide"
-                    datepicker
-                    datepicker-autohide
-                    type="text"
-                    class="block w-full rounded-md bg-[#F2F2F2] py-1.5 ps-10 text-base text-gray-400 font-medium border-0 outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-[#C18C5D] sm:text-sm/6 placeholder:text-sm placeholder:text-gray-300 placeholder:font-normal"
-                    placeholder="DD/MM/YYYY"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="border border-gray-200 w-full my-4"></div>
-            <div id="input-panel-section-4" class="w-full flex justify-between">
-              <button
-                class="w-20 h-10 text-zinc-400 underline font-medium text-sm rounded-md"
-              >
-                Clear All
-              </button>
-              <button
-                class="w-20 h-10 bg-[#C18C5D] text-white font-medium text-sm rounded-md"
-              >
-                Check
-              </button>
             </div>
           </div>
         </div>
